@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Six hands-on JavaScript challenges for learning the DOM.">
+  <title>JavaScript DOM Lab</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./lessons.js" defer></script>
+  <script src="./lab.js" defer></script>
+  <script src="./practice.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#lesson">Skip to lesson</a>
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="brand" href="#menu"><span aria-hidden="true">JS</span> DOM Lab</a>
+      <div class="progress-group">
+        <label for="progress" id="progress-label">0 of 6 completed</label>
+        <progress id="progress" value="0" max="6"></progress>
+      </div>
+      <nav aria-label="Challenges" id="navigation"></nav>
+    </aside>
+    <main id="lesson" tabindex="-1">
+      <div class="lesson-header">
+        <div id="lesson-number" class="eyebrow"></div>
+        <h1 id="title"></h1>
+        <p id="goal"></p>
+      </div>
+      <details class="setup">
+        <summary>Set up your practice files</summary>
+        <p>Create a folder with <code>index.html</code>, <code>app.css</code>, and <code>app.js</code>. Start with a basic HTML page. Put <code>&lt;link rel="stylesheet" href="app.css"&gt;</code> in its head and <code>&lt;script src="app.js"&gt;&lt;/script&gt;</code> at the end of its body. Open <code>index.html</code> in a browser. Save your edits and refresh after each change.</p>
+        <p>Work in order and keep your files between challenges. Use the live demo to see the target behavior, then try to build it using the hints.</p>
+      </details>
+      <div class="lesson-grid">
+        <div class="practice">
+          <section aria-labelledby="hints-title">
+            <h2 id="hints-title">Build it step by step</h2>
+            <p class="support">Open one hint at a time as you work.</p>
+            <div id="hints"></div>
+          </section>
+          <section class="check coding" aria-labelledby="coding-title">
+            <h2 id="coding-title">Write and test your JavaScript</h2>
+            <p class="support">The HTML and CSS are provided. Complete the JavaScript, then check what your code does.</p>
+            <details id="provided">
+              <summary>View the provided HTML and CSS</summary>
+              <div id="fixture-code"></div>
+            </details>
+            <form id="code-form">
+              <label for="editor">Your JavaScript</label>
+              <textarea id="editor" rows="10" spellcheck="false" autocapitalize="off" autocomplete="off"></textarea>
+              <div class="editor-actions">
+                <button type="submit" id="run">Check code</button>
+                <button type="button" class="plain" id="restore">Restore starter code</button>
+              </div>
+            </form>
+            <p id="code-feedback" role="status"></p>
+            <div id="runner-bin" hidden></div>
+          </section>
+          <section class="check" aria-labelledby="check-title">
+            <h2 id="check-title">Quick check</h2>
+            <form id="quiz"></form>
+            <p id="feedback" role="status"></p>
+          </section>
+          <details id="answer" class="answer">
+            <summary>Reveal the answer</summary>
+            <div id="solution"></div>
+          </details>
+        </div>
+        <section class="demo-card" aria-labelledby="demo-title">
+          <div class="demo-header"><h2 id="demo-title">Live demo</h2><button type="button" class="plain" id="restart">Restart demo</button></div>
+          <div class="stage" id="stage"></div>
+          <div class="expect"><strong>Test this</strong><p id="expectation"></p></div>
+        </section>
+      </div>
+      <footer class="controls">
+        <button type="button" id="complete" aria-pressed="false">Mark complete</button>
+        <a id="next"></a>
+      </footer>
+    </main>
+  </div>
+  <noscript>This study site needs JavaScript to display its lessons and demos.</noscript>
+</body>
+</html>
